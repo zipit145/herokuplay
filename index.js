@@ -9,7 +9,7 @@ var data =  [
 ]
 app.use(cors())
 
-app.get('/words', (req, res) => {
+app.get('/', (req, res) => {
     res.send({data})
 })
 
