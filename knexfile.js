@@ -25,7 +25,7 @@ module.exports = {
 
   production: {
     client: 'pg',
-    connection: 'process.env.g4heroku',
+    connection: process.env.DATABASE_URL,
   }
 
 };
