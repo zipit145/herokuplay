@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const cors = require('cors')
 const port = process.env.PORT || 3000
+const queries = require('./queries')
 var data =  [
     {id: 1, word: "word9"},
     {id: 2, word: "word10"},
@@ -10,7 +11,7 @@ var data =  [
 app.use(cors())
 
 app.get('/', (req, res) => {
-    res.send({data})
+    queries.listAll().then(students => res.send(students))
 })
 
 
